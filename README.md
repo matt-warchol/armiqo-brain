@@ -1,67 +1,91 @@
 # Armiqo Brain
 
 [![mcptry](https://mcptry.com/badge/io.github.matt-warchol/armiqo-brain)](https://mcptry.com/servers/io.github.matt-warchol/armiqo-brain)
-**Free B2B account management playbook for AI assistants.**
 
-Connect Armiqo Brain to an MCP-compatible AI assistant to get practical guidance on retaining clients, preparing account reviews, planning renewals, identifying churn signals and growing existing relationships.
+**You ship code. Your clients still expect account management.**
 
-**[Connect Armiqo Brain](https://armiqo.com/brain/)** · **[MCP endpoint](https://armiqo.com/mcp/)**
+A free, read-only MCP playbook for the developer, tech lead or agency founder who would rather debug a production incident than prepare another QBR.
 
-## What you get
+**No new dashboard. No account to create. No CRM migration.** Add one MCP URL to a compatible AI assistant and ask about the client situation you're dealing with.
 
-- Account plans built around customer goals
-- Early-warning prompts for retention and churn risk
-- Renewal and expansion conversation frameworks
-- Meeting and QBR preparation
-- Stakeholder mapping and difficult-client scenarios
+[**Connect the Brain**](https://armiqo.com/brain/) · [**Try the remote MCP endpoint**](https://armiqo.com/mcp/) · [**Report an issue**](https://github.com/matt-warchol/armiqo-brain/issues)
 
-The Brain is an **on-demand, read-only knowledge resource**. It cannot access your CRM, monitor accounts, send emails, schedule reminders, or take actions without additional integrations.
+![Example: from a renewal-risk question to a concrete 48-hour action plan](assets/brain-demo.svg)
 
-## Connect
+> **The pitch:** You know how to build and ship. Keeping clients happy, preparing for awkward calls, spotting churn risk and growing an account? That's a different skill tree. Brain gives your AI assistant a practical B2B account-management playbook, so you don't have to start from a blank page.
 
-Remote MCP URL:
+## The bugs it helps with (that aren't in your code)
+
+| Situation | Ask Brain |
+| --- | --- |
+| Client suddenly went silent | "Renewal in 90 days and our sponsor stopped replying. What are the warning signs and next 48-hour moves?" |
+| QBR tomorrow, zero prep | "Build a QBR outline around outcomes, risks, and next-quarter decisions." |
+| Scope creep in the sprint | "The client wants two extra features by Friday. Help me frame the tradeoffs." |
+| Rate increase feels awkward | "How should I approach an 8% rate increase with a long-term agency client?" |
+| Relationship depends on one person | "Our champion left. Who should we map and approach next?" |
+| Account is healthy but static | "Give me low-pressure ways to discover expansion opportunities." |
+
+This is **advice, not automation**. The Brain doesn't see your CRM, send emails or monitor clients autonomously. You remain in control of what you share and what action to take.
+
+## Quick start: one URL
 
 ```text
 https://armiqo.com/mcp/
 ```
 
-Use your assistant's **Add MCP server / Connectors** interface and select a remote HTTP MCP server. Availability and exact steps depend on your app and subscription. For Claude Desktop, ChatGPT and other clients, follow that client's current remote-MCP setup flow.
+Add this URL as a **remote Streamable HTTP MCP server** in your MCP-compatible AI client, then try:
 
-No Armiqo login is currently required.
+```text
+Use Armiqo Brain. Our client went quiet after a new VP joined.
+Renewal is in 90 days. What should we do this week?
+```
 
-### Try these questions
+The setup UI depends on your AI client and plan. [Open the website for connection guidance](https://armiqo.com/brain/).
 
-- "A client stopped responding 90 days before renewal. What should I check first?"
-- "Help me prepare a quarterly business review for an agency client."
-- "How do I raise rates without damaging a long-term client relationship?"
-- "Create a 90-day account plan based on my client's goals."
+### What actually happens?
 
-Do not include customer secrets or personal data in questions. Your AI client chooses what arguments it sends to the MCP server.
+```text
+You (in your AI assistant)
+  └─ ask about client risk, QBR, renewal, scope or growth
+      └─ consult_brain(question)
+          └─ relevant playbook modules
+              └─ assistant suggests a next step you can take
+```
 
-## MCP tools
+The MCP server returns *knowledge and frameworks*. Your assistant works with your supplied context to produce the response. It doesn't automatically generate or send actual PDFs, calendar events, outreach or status reports.
 
-| Tool | Purpose |
+## Available MCP tools
+
+| Tool | Result |
 | --- | --- |
-| `consult_brain` | Route a question to relevant playbook modules |
-| `list_modules` | Show available modules |
-| `get_module` | Retrieve a module |
+| `consult_brain` | Picks relevant modules for your client question |
+| `list_modules` | Lists the available playbook categories |
+| `get_module` | Returns a specific account-management playbook module |
 
-## Source and licensing
+Topics include account plans, churn risk, renewals, growth, stakeholder maps, meeting prep, portfolio health, difficult conversations, and email templates.
 
-**This repository is the public integration, metadata and documentation package, not the source of the hosted MCP implementation.** The hosted server, analytics integration and full playbook content remain private for now. The MIT license in this repository applies to the files actually published here. It does not cover the private hosted implementation or its proprietary playbook content.
+## Built for builders, not career account managers
 
-If we later release a sanitized self-hostable edition, it will have its own clear license and compatibility notes. Do not copy the private monorepo, internal research, customer materials or build-time-generated playbook text into this repo.
+- **If you're a solo founder:** Get a second brain for customer retention without hiring an account manager.
+- **If you're a tech lead:** Turn uncomfortable commercial conversations into a clearer set of options.
+- **If you're running a dev agency:** Give delivery teams a practical framework for client relationships, without forcing them into a full CRM.
+- **If you already have an AM:** Use the Brain as a checklist or meeting-prep reference, not a replacement for judgment.
 
-## Privacy
+The public free Brain is the playbook. [Armiqo](https://armiqo.com/) is the separate product intended to help run post-sale processes with real client context.
 
-The server can receive the questions an AI client forwards to the `consult_brain` tool. Usage analytics may record the tool name, inferred topic, anonymous usage identifiers, errors and response time. The server's telemetry implementation is designed not to send raw questions or response bodies to PostHog.
+## Privacy and ownership
 
-Read the [Armiqo website](https://armiqo.com/brain/) for the current product description.
+The hosted service can receive questions forwarded by your AI client. Avoid sharing passwords, customer secrets or personal data in prompts. Usage telemetry may capture pseudonymous IDs, tool names, inferred topic, error codes and latency, **not the raw prompt or response body**.
 
-## Report a problem
+**This is the public documentation and Registry metadata repository for a hosted MCP, not the server's source code.** The implementation and full playbook library remain private. The repository MIT license applies to the files published here, not to unpublished source code or proprietary knowledge.
 
-Open a GitHub issue with steps to reproduce, your MCP client name/version, and a sanitized error message. Never paste access tokens, customer names, confidential client details or private chats.
+- [Security policy](SECURITY.md)
+- [Registry manifest](server.json)
+- [MCP Registry listing](https://registry.modelcontextprotocol.io/)
+- [mcptry live status](https://mcptry.com/servers/io.github.matt-warchol/armiqo-brain)
 
-## About Armiqo
+## A useful question beats another dashboard
 
-Armiqo Brain is a free educational entry point to [Armiqo](https://armiqo.com/), a system for running proactive post-sale account management.
+Start with the client you least want to call this week. Ask the Brain what to do next.
+
+**[Connect Armiqo Brain →](https://armiqo.com/brain/)**
