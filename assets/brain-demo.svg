@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-label="Armiqo Brain: developer asks Claude about a quiet customer before renewal and gets next steps">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11111d"/><stop offset="1" stop-color="#1e1731"/></linearGradient><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9c69fe"/><stop offset="1" stop-color="#6645dc"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="22"/></filter></defs>
+<rect width="1200" height="660" rx="28" fill="url(#bg)"/><circle cx="980" cy="90" r="160" fill="#713fd9" opacity=".12" filter="url(#glow)"/>
+<rect x="42" y="40" width="1116" height="580" rx="20" fill="#141420" stroke="#38334b" stroke-width="2"/>
+<rect x="42" y="40" width="1116" height="66" rx="20" fill="#201d2d"/><rect x="42" y="85" width="1116" height="21" fill="#201d2d"/>
+<circle cx="77" cy="72" r="8" fill="#ff6f72"/><circle cx="104" cy="72" r="8" fill="#ffbd57"/><circle cx="131" cy="72" r="8" fill="#39cd8b"/>
+<text x="176" y="80" font-family="Arial, sans-serif" fill="#d8d5e4" font-size="21" font-weight="bold">Armiqo Brain</text><text x="1011" y="80" font-family="Arial, sans-serif" font-size="15" fill="#b8aacd">MCP · live demo</text>
+<rect x="78" y="145" width="515" height="130" rx="17" fill="#292637" stroke="#3c374f"/>
+<text x="105" y="185" font-family="Arial,sans-serif" fill="#b8b3cb" font-size="17">YOU · Technical founder</text>
+<text x="105" y="225" font-family="Arial,sans-serif" fill="#fff" font-size="22" font-weight="bold">Client went quiet. Renewal in 90 days.</text>
+<text x="105" y="252" font-family="Arial,sans-serif" fill="#e0dce9" font-size="19">What should I do without another meeting?</text>
+<rect x="644" y="145" width="470" height="140" rx="17" fill="#231f36" stroke="#8f6af0" stroke-width="2"/>
+<text x="675" y="184" font-family="monospace" fill="#b5a2ff" font-size="18">↳ MCP · consult_brain</text>
+<text x="675" y="226" font-family="monospace" fill="#ded7f4" font-size="19">intent: risk-radar</text>
+<text x="675" y="257" font-family="monospace" fill="#ded7f4" font-size="19">module: renewals-expansion</text>
+<path d="M593 215 H637" stroke="#9772f5" stroke-width="3" stroke-dasharray="6 7"/><path d="M628 207 l10 8 -10 8" fill="none" stroke="#9772f5" stroke-width="3"/>
+<rect x="78" y="320" width="1036" height="242" rx="19" fill="#1e2030" stroke="#54506e"/>
+<rect x="99" y="342" width="7" height="196" rx="3" fill="url(#a)"/>
+<text x="127" y="380" font-family="Arial,sans-serif" fill="#bca4ff" font-size="18" font-weight="bold">ARMIQO BRAIN · ACTION PLAN</text>
+<text x="127" y="424" font-family="Arial,sans-serif" fill="#f9f8ff" font-size="24" font-weight="bold">01  Check the actual signal</text>
+<text x="170" y="450" font-family="Arial,sans-serif" fill="#c5c0d3" font-size="18">Is the sponsor gone, busy, or evaluating alternatives?</text>
+<text x="127" y="485" font-family="Arial,sans-serif" fill="#f9f8ff" font-size="24" font-weight="bold">02  Send a useful, low-friction check-in</text>
+<text x="170" y="511" font-family="Arial,sans-serif" fill="#c5c0d3" font-size="18">Share an outcome recap and ask one specific question.</text>
+<rect x="829" y="452" width="251" height="70" rx="12" fill="#30254d" stroke="#8064ce"/>
+<text x="954" y="480" font-family="Arial,sans-serif" fill="#e5d9ff" font-size="16" font-weight="bold" text-anchor="middle">NEXT 48 HOURS</text>
+<text x="954" y="502" font-family="Arial,sans-serif" fill="#bdabd8" font-size="16" text-anchor="middle">One concrete move</text>
+<text x="79" y="600" font-family="monospace" fill="#b7adc9" font-size="18">You ship code. Brain brings the client playbook.</text>
+</svg>
