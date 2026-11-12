@@ -1,6 +1,7 @@
 # Armiqo Brain
 
 [![mcptry](https://mcptry.com/badge/io.github.matt-warchol/armiqo-brain)](https://mcptry.com/servers/io.github.matt-warchol/armiqo-brain)
+[![Armiqo Brain — Free B2B Account Management Playbook MCP connector – tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/io.github.matt-warchol/armiqo-brain/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.matt-warchol/armiqo-brain)
 
 **You ship code. Your clients still expect account management.**
 
