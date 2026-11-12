@@ -1,0 +1,34 @@
+name: Publish MCP Registry metadata
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout public metadata
+        uses: actions/checkout@v5
+
+      - name: Download official MCP publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --output /tmp/mcp-publisher.tgz "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_linux_amd64.tar.gz"
+          tar -xzf /tmp/mcp-publisher.tgz mcp-publisher
+          chmod +x ./mcp-publisher
+
+      - name: Validate manifest
+        run: ./mcp-publisher validate server.json
+
+      - name: Authenticate via GitHub OIDC
+        run: ./mcp-publisher login github-oidc
+
+      - name: Publish to the official MCP Registry
+        run: ./mcp-publisher publish server.json
