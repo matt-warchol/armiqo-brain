@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.matt-warchol/armiqo-brain",
+  "title": "Armiqo Brain — Free B2B Account Management Playbook",
+  "description": "Free founder-built MCP playbook for B2B client retention, renewals, growth and account planning.",
+  "version": "0.4.1",
+  "websiteUrl": "https://armiqo.com/brain/",
+  "icons": [
+    {
+      "src": "https://armiqo.com/icon-192.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "192x192"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://armiqo.com/mcp/"
+    }
+  ]
+}
