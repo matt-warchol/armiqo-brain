@@ -1,5 +1,6 @@
 # Armiqo Brain
 
+[![mcptry](https://mcptry.com/badge/io.github.matt-warchol/armiqo-brain)](https://mcptry.com/servers/io.github.matt-warchol/armiqo-brain)
 **Free B2B account management playbook for AI assistants.**
 
 Connect Armiqo Brain to an MCP-compatible AI assistant to get practical guidance on retaining clients, preparing account reviews, planning renewals, identifying churn signals and growing existing relationships.
